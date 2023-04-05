@@ -1,18 +1,20 @@
 * {
   box-sizing: border-box;
+  background-color: black;
 }
 
 .calculator {
     display: grid;
+    background-color: grey;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-gap: 10px;
     max-width: 300px;
     margin: auto;
     padding: 10px;
-    border: 1px solid black;
+    border: 3px solid darkgrey;
     border-radius: 5px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 2px darkgrey;
 }
 
 input {
@@ -20,8 +22,9 @@ input {
 } 
 
 .screen {
-  background-color: #f2f2f2;
+  background-color: black;
   border: 1px solid black;
+  color: white;
   border-radius: 5px;
   font-size: 24px;
   text-align: right;
@@ -39,7 +42,7 @@ input {
 }
   
 .btn:hover {
-  background-color: #d9d9d9;
+  background-color: darkgray;
 }
   
 #clear, #backspace, #divide, #multiply, #subtract, #add, #equals {
@@ -48,7 +51,7 @@ input {
 }
   
 #clear:hover, #backspace:hover, #divide:hover, #multiply:hover, #subtract:hover, #add:hover, #equals:hover {
-  background-color: #e68a00;
+  background-color: #804d02;
 }
 
 #screen-grid {
@@ -66,4 +69,14 @@ input {
 #equals {
   grid-row: 6 / span 1;
   grid-column: 4;
+}
+
+#empty {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 3;
+  color: #e6e6e6;
+}
+
+.empty:hover {
+  color: black;
 }
