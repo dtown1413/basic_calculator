@@ -28,7 +28,7 @@ input {
   padding: 10px;
 }
 
-.btn {
+.btn, .equals, .clear {
   background-color: #e6e6e6;
   border: 1px solid black;
   border-radius: 5px;

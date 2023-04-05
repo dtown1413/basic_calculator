@@ -1,24 +1,28 @@
-let screen = document.querySelector('.screen');
-let buttons = document.querySelectorAll('.btn');
-let clear = document.querySelector('.clear');
-let equals = document.querySelector('.equals');
+(function() {
 
-buttons.forEach(function(button) {
-    button.addEventListener('click', function(e) {
-            let value = e.target.dataset.num;
-            screen.value += value;
-        })
-});
+    let screen = document.querySelector('.screen');
+    let buttons = document.querySelectorAll('.btn');
+    let clear = document.querySelector('.clear');
+    let equals = document.querySelector('.equals');
 
-equals.addEventListener('click', function(e){
-    if(screen.value === ''){
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function(e) {
+                let value = e.target.dataset.num;
+                screen.value += value;
+            })
+    });
+
+    equals.addEventListener('click', function(e) {
+        if(screen.value === ''){
+            screen.value = "";
+        }else{
+            let answer = eval(screen.value);
+            screen.value = answer;
+        }
+    });
+
+    clear.addEventListener('click', function(e){
         screen.value = "";
-    }else{
-        let answer = eval(screen.value);
-        screen.value = answer;
-    }
-});
-
-clear.addEventListener('click', function(e){
-    screen.value = "";
-});
+    });
+    
+})();
