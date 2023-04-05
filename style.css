@@ -51,7 +51,7 @@ input {
   background-color: #e68a00;
 }
 
-#screen {
+#screen-grid {
   grid-column: 1 / span 4;
 }
 
