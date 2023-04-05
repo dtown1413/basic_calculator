@@ -40,11 +40,27 @@ input {
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
-  
+
+.empty {
+  color: #e6e6e6;
+  background-color: #e6e6e6;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
 .btn:hover {
   background-color: darkgray;
 }
-  
+
+.empty:hover {
+  color: black;
+  background-color: darkgray;
+}
+
 #clear, #backspace, #divide, #multiply, #subtract, #add, #equals {
   background-color: #ff9900;
   color: white;
@@ -74,9 +90,5 @@ input {
 #empty {
   grid-row: 2 / span 1;
   grid-column: 1 / span 3;
-  color: #e6e6e6;
 }
 
-.empty:hover {
-  color: black;
-}
